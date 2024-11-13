@@ -3,6 +3,7 @@
 ```
 library(devtools)
 install_github("chungili/NewFOS")
+library(FOS)
 ```
 
 # Read Dataset
