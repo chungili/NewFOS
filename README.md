@@ -1,6 +1,26 @@
 # Install the packages
+
+```
+library(devtools)
+install_github("chungili/NewFOS")
+```
+
 # Read Dataset
+
+```
+data(FOSdt)
+```
+
 # Data Preprocessing
+
+```
+x1 = prepro(dt_secom$V2)[1:61]
+x2 = prepro(dt_secom$V25)[1:379] 
+x3 = prepro(dt_secom$V158)[1:751]
+x4 = prepro(dt_secom$V190)[1:1536]
+x6 = prepro(dt_sonar$V6)[1:200]
+```
+
 # Calcuate EPC Control Limits
 In this package, we provide the implements of the three methods, Class FOS, adaptive FOS, and 3-term FOS, for calculating EPC control limits.
 The correspoding R functions are `FOS()`, `FOS_ad()` and `FOS_3terms()`. For example, we would like to calcuate the EPC control limits for variable `x1`.
