@@ -1,7 +1,7 @@
 # Install the packages
 
 ```
-require(devtools)
+if(!("devtools" %in% rownames(installed.packages()))) install.packages("devtools")
 install_github("chungili/NewFOS")
 library(FOS)
 ```
