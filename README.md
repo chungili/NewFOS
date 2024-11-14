@@ -1,7 +1,7 @@
 # Install the packages
 
 ```
-library(devtools)
+require(devtools)
 install_github("chungili/NewFOS")
 library(FOS)
 ```
