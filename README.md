@@ -2,6 +2,7 @@
 
 ```
 if(!("devtools" %in% rownames(installed.packages()))) install.packages("devtools")
+library(devtools)
 install_github("chungili/NewFOS")
 library(FOS)
 ```
