@@ -22,10 +22,10 @@ prepro = function(x, trim=TRUE){
 #' @param x Input data vector
 #' @param alpha False alarm rate
 #'
-#' @return the lower and upper confidence bounds.
+#' @return the lower and upper confidence bounds ans pn value.
 #' \itemize{
-#'  \item{ LCL:}{ The lower confidence limit}
-#'  \item{ UCL:}{ The upper confidence limit}
+#'  \item{ limits:}{ The lower and upper confidence limit}
+#'  \item{ pn :}{ The nominal coverage probability}
 #'  }
 #' @export
 #'
@@ -58,10 +58,11 @@ FOS = function(x, alpha = 0.0027){
   ku = uniroot(fun2, c(0, n+1))$root
   ur = kl/(n+1)
   us = ku/(n+1)
+  pn = Pn_FOS(n)
   LCL = limit(u=ur)
   UCL = limit(u=us)
   limits = cbind(LCL, UCL)
-  return(limits)
+  return(list(limits=limits, pn=pn)
 }
 
 #' The adaptive FOS method
