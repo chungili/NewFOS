@@ -62,7 +62,7 @@ FOS = function(x, alpha = 0.0027){
   LCL = limit(u=ur)
   UCL = limit(u=us)
   limits = cbind(LCL, UCL)
-  return(list(limits=limits, pn=pn)
+  return( list(limits=limits, pn=pn) )
 }
 
 #' The adaptive FOS method
